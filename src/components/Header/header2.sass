@@ -1,0 +1,64 @@
+@import '../../style/style.sass'
+    
+.header2
+    padding: 14px 80px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 68px
+    &__btn
+        display: flex
+        width: 176px
+        padding: 10px 24px 10px 16px
+        align-items: center
+        gap: 12px
+        flex-shrink: 0
+        color: #FFFFFF
+        background-color: $blue-color
+        border-radius: 60px
+        border: none
+        letter-spacing: 0.1px
+    &__search
+        position: relative
+        margin-left: 24px
+        margin-right: 24px
+        width: 100%
+        top: -18px
+        &_input
+            width: 90%
+            border-radius: 58px
+            border-color: $blue-color
+            display: flex
+            padding: 9px 22px 8px 24px
+            align-items: flex-start
+            gap: 10px
+            font-size: 16px
+            font-family: Rubik
+            letter-spacing: 0.1px
+            z-index: 2
+            position: absolute
+        &_btn
+            width: 100%
+            height: 39px
+            color: #FFFFFF
+            background-color: $blue-color
+            border-radius: 56px
+            border: none
+            letter-spacing: 0.1px
+            text-align: right
+            padding-right: 16px
+            position: absolute
+    &__profile
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &_item
+            width: 76px
+            display: flex
+            flex-direction: column
+            align-items: center
+            img
+                width: 20px
+                height: 20px
+            &:hover
+                color: $blue-color
