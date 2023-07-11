@@ -110,39 +110,23 @@ const Catalog: React.FC = () => {
             infoList: [
                 {
                     id: 1,
-                    value: '60 см'
+                    value: 'зелёный'
                 },
                 {
                     id: 2,
-                    value: '90 см'
+                    value: 'тёмный'
                 },
                 {
                     id: 3,
-                    value: '120 см'
+                    value: 'светлый'
                 },
                 {
                     id: 4,
-                    value: '150 см'
+                    value: 'голубой'
                 },
                 {
                     id: 5,
-                    value: '180 см'
-                },
-                {
-                    id: 6,
-                    value: '210 см'
-                },
-                {
-                    id: 7,
-                    value: '240 см'
-                },
-                {
-                    id: 8,
-                    value: '270 см'
-                },
-                {
-                    id: 9,
-                    value: '300 см'
+                    value: 'синий'
                 },
             ],
             price: '6 331 p.',
@@ -155,39 +139,23 @@ const Catalog: React.FC = () => {
             infoList: [
                 {
                     id: 1,
-                    value: '60 см'
+                    value: 'зелёный'
                 },
                 {
                     id: 2,
-                    value: '90 см'
+                    value: 'тёмный'
                 },
                 {
                     id: 3,
-                    value: '120 см'
+                    value: 'светлый'
                 },
                 {
                     id: 4,
-                    value: '150 см'
+                    value: 'голубой'
                 },
                 {
                     id: 5,
-                    value: '180 см'
-                },
-                {
-                    id: 6,
-                    value: '210 см'
-                },
-                {
-                    id: 7,
-                    value: '240 см'
-                },
-                {
-                    id: 8,
-                    value: '270 см'
-                },
-                {
-                    id: 9,
-                    value: '300 см'
+                    value: 'синий'
                 },
             ],
             price: '6 331 p.',
