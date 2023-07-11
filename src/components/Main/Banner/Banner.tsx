@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
-import firstSlide from '../../../assets/images/banner/banner.jpg';
+import firstSlide from '../../../assets/images/banner/banner1.png';
 
 import './banner.sass';
 
@@ -25,6 +25,7 @@ const Banner: React.FC = () => {
                             <li className="banner__list_item">Пиротехника</li>
                             <li className="banner__list_item">Новогодние подарки</li>
                         </ul>
+                        <button className="banner__btn">Перейти к каталогу</button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>

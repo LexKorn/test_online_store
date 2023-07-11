@@ -13,11 +13,8 @@
         align-items: center
         gap: 12px
         flex-shrink: 0
-        color: #FFFFFF
-        background-color: $blue-color
         border-radius: 60px
-        border: none
-        letter-spacing: 0.1px
+        @include btn
     &__search
         position: relative
         margin-left: 24px
@@ -27,7 +24,7 @@
         &_input
             width: 90%
             border-radius: 58px
-            border-color: $blue-color
+            border: none
             display: flex
             padding: 9px 22px 8px 24px
             align-items: flex-start
@@ -37,17 +34,18 @@
             letter-spacing: 0.1px
             z-index: 2
             position: absolute
+            top: 2px
+            left: 2px
+            // &:active
+            //     border: 1px solid $blue-color
         &_btn
             width: 100%
             height: 39px
-            color: #FFFFFF
-            background-color: $blue-color
             border-radius: 56px
-            border: none
-            letter-spacing: 0.1px
             text-align: right
             padding-right: 16px
             position: absolute
+            @include btn
     &__profile
         display: flex
         justify-content: space-between
@@ -57,8 +55,9 @@
             display: flex
             flex-direction: column
             align-items: center
-            img
-                width: 20px
-                height: 20px
+            color: rgb(40, 40, 40)
+            text-decoration: none
             &:hover
                 color: $blue-color
+                svg path
+                    stroke: $blue-color
