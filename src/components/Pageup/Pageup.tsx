@@ -18,13 +18,8 @@ const Pageup: React.FC = () => {
         };
     }, []);
 
-    // useEffect(() => {
-    //     console.log(scrollTop);
-    // }, [scrollTop]);
-    
-
     return (
-        <a href="#up" className='pageup' style={{display : scrollTop > 500 ? 'block' : 'none' }}>
+        <a href="#up" className='pageup' style={{display : scrollTop > 600 ? 'block' : 'none' }}>
             <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none">
                 <g filter="url(#filter0_d_17_399)">
                     <g clipPath="url(#clip0_17_399)">

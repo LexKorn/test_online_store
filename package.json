@@ -1,8 +1,10 @@
 {
-  "name": "zubova_online",
+  "name": "test_online_store",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.3.2",
+    "lodash.debounce": "^4.0.8",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
@@ -16,6 +18,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
+    "@types/lodash.debounce": "^4.0.7",
     "@types/node": "^16.18.38",
     "@types/react": "^18.2.14",
     "@types/react-bootstrap": "^0.32.32",

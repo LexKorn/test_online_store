@@ -1,6 +1,7 @@
 import React from 'react';
 
 import CatalogItem from '../CatalogItem/CatalogItem';
+import ScrollableContainer from '../ScrollableContainer/ScrollableContainer';
 import pic01 from '../../../assets/images/catalog/01.png';
 import pic02 from '../../../assets/images/catalog/02.png';
 import pic03 from '../../../assets/images/catalog/03.png';
@@ -160,15 +161,74 @@ const Catalog: React.FC = () => {
             ],
             price: '6 331 p.',
         },
+        {
+            id: 5,
+            img: pic03,
+            title: 'Ель комбинированная “Уральская снежная” (ПВХ + РЕ)',
+            infoTitle: 'Цвет',
+            infoList: [
+                {
+                    id: 1,
+                    value: 'зелёный'
+                },
+                {
+                    id: 2,
+                    value: 'тёмный'
+                },
+                {
+                    id: 3,
+                    value: 'светлый'
+                },
+                {
+                    id: 4,
+                    value: 'голубой'
+                },
+                {
+                    id: 5,
+                    value: 'синий'
+                },
+            ],
+            price: '6 331 p.',
+        },
+        {
+            id: 6,
+            img: pic04,
+            title: 'Ель комбинированная “Уральская весная” (ПВХ + РЕ)',
+            infoTitle: 'Цвет',
+            infoList: [
+                {
+                    id: 1,
+                    value: 'зелёный'
+                },
+                {
+                    id: 2,
+                    value: 'тёмный'
+                },
+                {
+                    id: 3,
+                    value: 'светлый'
+                },
+                {
+                    id: 4,
+                    value: 'голубой'
+                },
+                {
+                    id: 5,
+                    value: 'синий'
+                },
+            ],
+            price: '6 331 p.',
+        },
     ];
 
     return (
         <div className='catalog'>
             <div className="catalog__breadcrumbs"><a href="#"><span>Каталог</span></a> / <a href="#">Все товары</a></div>
             <div className='catalog__products'>
-                {catalog.map(item =>
+                {/* {catalog.map(item =>
                     <CatalogItem item={item} key={item.id} />
-                )}
+                )} */}
+                <ScrollableContainer catalog={catalog} />
             </div>
         </div>
     );
