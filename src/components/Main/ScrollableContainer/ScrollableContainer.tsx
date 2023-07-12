@@ -68,16 +68,6 @@ const ScrollableContainer = ({catalog}: {catalog: IProduct[]}) => {
       >
         →
       </button>
-      {canScrollLeft ? (
-        <div className="shadowWrapper leftShadowWrapper">
-          <div className="shadow leftShadow" />
-        </div>
-      ) : null}
-      {canScrollRight ? (
-        <div className="shadowWrapper rightShadowWrapper">
-          <div className="shadow rightShadow" />
-        </div>
-      ) : null}
     </div>
   );
 };
