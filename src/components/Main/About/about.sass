@@ -5,6 +5,8 @@
     display: grid
     grid-template-columns: 50% 47%
     column-gap: 3%
+    &__title
+        display: none
     &__text
         text-align: left
         color: rgb(40, 40, 40)
@@ -23,3 +25,43 @@
     &__img
         width: 100%
         object-fit: cover
+
+@media (max-width: 991px)
+    .about
+        height: 250px
+        &__text
+            &_description
+                font-size: 16px
+                line-height: 22px
+
+@media (max-width: 800px)
+    .about
+        padding: 0 24px
+        height: unset
+        grid-template-columns: unset
+        grid-template-rows: 28px 300px minmax(110px, auto)
+        row-gap: 12px
+        &__title
+            display: block
+            font-size: 28px
+            font-weight: 600
+            line-height: 33px
+        &__text
+            &_title
+                display: none
+            &_description
+                p
+                    margin-bottom: 0.5rem
+        &__img
+            width: 95%
+            height: 300px
+            object-fit: contain
+            grid-row: 2
+
+@media (max-width: 428px)
+    .about
+        grid-template-rows: 28px 144px minmax(200px, auto)
+        &__img
+            height: 144px
+            object-fit: cover
+            border-radius: 40px

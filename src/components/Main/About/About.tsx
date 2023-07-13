@@ -8,6 +8,7 @@ import './about.sass';
 const About: React.FC = () => {
     return (
         <div className='about'>
+            <div className="about__title">О нас</div>
             <div className="about__text">
                 <div className="about__text_title">О нас</div>
                 <div className="about__text_description">

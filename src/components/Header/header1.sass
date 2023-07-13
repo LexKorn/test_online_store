@@ -25,3 +25,24 @@
     &__social_icon:hover
         svg path
             fill: $blue-color
+
+@media(max-width: 768px)
+    .header1
+        padding: 8px 50px
+
+@media(max-width: 640px)
+    .header1
+        padding: 8px 30px
+        &__nav_item
+            margin-right: 25px
+
+@media(max-width: 530px)
+    .header1
+        padding: 8px 20px
+        &__nav_item
+            margin-right: 15px
+            font-size: 13px
+
+@media(max-width: 428px)
+    .header1
+        display: none

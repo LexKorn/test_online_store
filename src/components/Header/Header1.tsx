@@ -5,7 +5,7 @@ import './header1.sass';
 
 const Header1: React.FC = () => {
     return (
-        <div className='header1' id='up'>
+        <div className='header1' id='up1'>
             <ul className="header1__nav">
                 <li className="header1__nav_item"><a href="#">О нас</a></li>
                 <li className="header1__nav_item"><a href="#">Оплата и доставка</a></li>

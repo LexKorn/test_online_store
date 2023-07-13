@@ -7,7 +7,7 @@
         list-style: none
         padding: 0 10px
         margin: 0
-        width: 94vw
+        width: 92vw
         &_item
             &:not(:last-child) 
                 margin-right: 2em
@@ -15,18 +15,36 @@
 .button 
     position: absolute
     top: 30%
-    width: 36px
-    height: 36px
     border-radius: 50%
     border: none
-    background-color: #fff
-    box-shadow: 0 4px 8px rgb(0 0 0 / 20%)
-    font-size: 1.2rem
     cursor: pointer
     z-index: 2
+    opacity: 0.4
     &--hidden
         display: none  
+    &:hover
+        opacity: 1
 .buttonLeft 
-    left: -20px 
+    left: -20px
+    rotate: 180deg
 .buttonRight 
     right: -20px
+
+@media(max-width: 768px)
+    .scrollableContainer__list
+        width: 90vw
+
+@media(max-width: 570px)
+    .scrollableContainer__list
+        width: 85vw
+        &_item
+            &:not(:last-child) 
+                margin-right: 1em
+    .button
+        top: 20%
+
+@media(max-width: 570px)
+    .scrollableContainer__list
+        width: 81vw
+    .button
+        top: 15%

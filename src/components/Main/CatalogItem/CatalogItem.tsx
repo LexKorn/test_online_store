@@ -50,7 +50,8 @@ const CatalogItem: React.FC<CatalogItemProps> = ({item}) => {
                 }
             </div>
             <div className="product__title">{item.title}</div>
-            <div className="product__info" style={{display: hover ? 'block' : 'none'}}>
+                <div className="product__price">{item.price}</div>
+                <div className="product__info" style={{display: hover ? 'block' : 'none'}}>
                 <div>{item.infoTitle}</div>
                 <div className="product__info_list">
                     {item.infoList.map(item =>
@@ -62,7 +63,7 @@ const CatalogItem: React.FC<CatalogItemProps> = ({item}) => {
                 <div className="product__cost_price">{item.price}</div>
                 <button className="product__cost_btn" style={{display: hover ? 'block' : 'none'}}>
                     <img src={basket} alt="basket"/>
-                    В корзину
+                    <span>В корзину</span>
                 </button>
             </div>
         </div>
