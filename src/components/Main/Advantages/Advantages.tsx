@@ -1,7 +1,6 @@
 import React from 'react';
 
 import ScrollableContainer from '../ScrollableContainer/ScrollableContainer';
-import AdvantageItem from '../AdvantageItem/AdvantageItem';
 import ozon from '../../../assets/images/advantages/ozon.png';
 import bank from '../../../assets/images/advantages/bank.png';
 import label from '../../../assets/images/advantages/label.png';
@@ -48,9 +47,6 @@ const Advantages: React.FC = () => {
 
     return (
         <div className='advantages'>
-            {/* {arrAdv.map(item =>
-                <AdvantageItem item={item} key={item.id} />
-            )} */}
             <ScrollableContainer catalog={arrAdv} />
         </div>
     );

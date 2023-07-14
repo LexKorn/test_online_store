@@ -1,6 +1,5 @@
 import React from 'react';
 
-import CatalogItem from '../CatalogItem/CatalogItem';
 import ScrollableContainer from '../ScrollableContainer/ScrollableContainer';
 import pic01 from '../../../assets/images/catalog/01.png';
 import pic02 from '../../../assets/images/catalog/02.png';
@@ -194,27 +193,43 @@ const Catalog: React.FC = () => {
             id: 6,
             img: pic04,
             title: 'Ель комбинированная “Уральская весная” (ПВХ + РЕ)',
-            infoTitle: 'Цвет',
+            infoTitle: 'Высота',
             infoList: [
                 {
                     id: 1,
-                    value: 'зелёный'
+                    value: '60 см'
                 },
                 {
                     id: 2,
-                    value: 'тёмный'
+                    value: '90 см'
                 },
                 {
                     id: 3,
-                    value: 'светлый'
+                    value: '120 см'
                 },
                 {
                     id: 4,
-                    value: 'голубой'
+                    value: '150 см'
                 },
                 {
                     id: 5,
-                    value: 'синий'
+                    value: '180 см'
+                },
+                {
+                    id: 6,
+                    value: '210 см'
+                },
+                {
+                    id: 7,
+                    value: '240 см'
+                },
+                {
+                    id: 8,
+                    value: '270 см'
+                },
+                {
+                    id: 9,
+                    value: '300 см'
                 },
             ],
             price: '6 331 p.',
@@ -225,9 +240,6 @@ const Catalog: React.FC = () => {
         <div className='catalog'>
             <div className="catalog__breadcrumbs"><a href="#"><span>Каталог</span></a> / <a href="#">Все товары</a></div>
             <div className='catalog__products'>
-                {/* {catalog.map(item =>
-                    <CatalogItem item={item} key={item.id} />
-                )} */}
                 <ScrollableContainer catalog={catalog} />
             </div>
         </div>

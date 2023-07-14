@@ -1,8 +1,6 @@
 .footer
-    height: 422px
     background-color: rgb(238, 238, 238)
     &__info
-        height: 374px
         padding: 40px 80px
         display: grid
         grid-template-columns: repeat(4, 1fr)
@@ -12,6 +10,7 @@
         &_nav
             list-style-type: none
             padding: 0
+            padding-right: 15px
             &_item
                 a
                     font-size: 14px
@@ -25,6 +24,7 @@
             &_icons
                 display: flex
                 flex-direction: column
+                align-items: start
                 margin-bottom: 12px
             &_title
                 opacity: 0.7
@@ -80,3 +80,44 @@
             height: 24px
     hr
         margin: 0
+
+@media (max-width: 1100px)
+    .footer
+        &__info
+            grid-template-columns: repeat(2, 1fr) 120px 1fr
+            &_contacts
+                input
+                    padding: 12px
+                    font-size: 14px
+                    line-height: 16px
+
+@media (max-width: 991px)
+    .footer
+        &__info
+            padding: 40px 60px
+            grid-template-columns: repeat(2, 1fr) 60px 1fr
+            &_contacts
+                input
+                    font-size: 12px
+                    line-height: 14px
+
+@media (max-width: 768px)
+    .footer
+        &__info
+            padding: 30px 30px
+            grid-template-columns: repeat(3, 1fr)
+            &_empty
+                display: none
+
+@media (max-width: 668px)
+    .footer
+        &__info
+            grid-template-columns: unset
+            grid-template-rows: auto auto
+            &_contacts
+                grid-row: 1
+                margin-bottom: 16px
+                input
+                    padding: 16px
+                    font-size: 14px
+                    line-height: 17px

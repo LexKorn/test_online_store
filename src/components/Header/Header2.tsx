@@ -1,20 +1,14 @@
 import React from 'react';
 
-import hamburger from '../../assets/icons/hamburger.svg';
-// import profile from '../../assets/icons/profile_empty.svg';
-// import heart from '../../assets/icons/heart_empty.svg';
-// import basket from '../../assets/icons/basket_empty.svg';
-
 import './header2.sass';
 
 
 const Header2: React.FC = () => {
     return (
         <div className="header2" id='up2'>
-            {/* <button className="header2__btn"><img src={hamburger} alt="hamburger"/><span>Каталог</span></button> */}
             <button className="header2__btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <g clip-path="url(#clip0_17_731)">
+                    <g clipPath="url(#clip0_17_731)">
                         <path d="M2.5 15H17.5V13.3333H2.5V15ZM2.5 10.8333H17.5V9.16667H2.5V10.8333ZM2.5 5V6.66667H17.5V5H2.5Z" fill="white"/>
                     </g>
                     <defs>

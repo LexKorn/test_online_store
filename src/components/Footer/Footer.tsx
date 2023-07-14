@@ -1,14 +1,9 @@
 import React from 'react';
+import {Accordion} from 'react-bootstrap';
 
 import mastercard from '../../assets/images/logos/mastercard.png';
 import mir from '../../assets/images/logos/mir.png';
 import visa from '../../assets/images/logos/visa.png';
-// import phone from '../../assets/icons/phone.svg';
-// import email from '../../assets/icons/email.svg';
-// import home from '../../assets/icons/home.svg';
-// import vk from '../../assets/icons/vk.svg';
-// import telegram from '../../assets/icons/telegram.svg';
-import arrow from '../../assets/icons/arrow_rigth.svg';
 
 import './footer.sass';
 
@@ -16,8 +11,8 @@ import './footer.sass';
 const Footer: React.FC = () => {
     return (
         <div className='footer'>
-            <div className="footer__info">
-                <ul className="footer__info_nav">Компания
+            <div className="footer__info" >
+                <ul className="footer__info_nav" style={{display: window.innerWidth > 668 ? 'block' : 'none'}}>Компания
                     <li className="footer__info_nav_item"><a href="#">О компании</a></li>
                     <li className="footer__info_nav_item"><a href="#">Блог</a></li>
                     <li className="footer__info_nav_item"><a href="#">Стать поставщиком</a></li>
@@ -26,7 +21,7 @@ const Footer: React.FC = () => {
                     <li className="footer__info_nav_item"><a href="#">Пользовательское соглашение</a></li>
                     <li className="footer__info_nav_item"><a href="#">Политика конфиденщиальности и оферта</a></li>
                 </ul>
-                <ul className="footer__info_nav">Покупателям
+                <ul className="footer__info_nav" style={{display: window.innerWidth > 668 ? 'block' : 'none'}}>Покупателям
                     <li className="footer__info_nav_item"><a href="#">Каталог</a></li>
                     <li className="footer__info_nav_item"><a href="#">Корзина</a></li>
                     <li className="footer__info_nav_item"><a href="#">Избранные товары</a></li>
@@ -35,7 +30,39 @@ const Footer: React.FC = () => {
                     <li className="footer__info_nav_item"><a href="#">Оплата</a></li>
                     <li className="footer__info_nav_item"><a href="#">Обмен и возврат</a></li>
                 </ul>
-                <div></div>
+
+                <Accordion style={{display: window.innerWidth <= 668 ? 'block' : 'none'}}>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>Компания</Accordion.Header>
+                        <Accordion.Body>
+                        <ul className="footer__info_nav" >
+                            <li className="footer__info_nav_item"><a href="#">О компании</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Блог</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Стать поставщиком</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Стать инвестором</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Контакты</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Пользовательское соглашение</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Политика конфиденщиальности и оферта</a></li>
+                        </ul>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header>Покупателям</Accordion.Header>
+                        <Accordion.Body>
+                        <ul className="footer__info_nav" >
+                            <li className="footer__info_nav_item"><a href="#">Каталог</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Корзина</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Избранные товары</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Личный кабинет</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Доставка</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Оплата</a></li>
+                            <li className="footer__info_nav_item"><a href="#">Обмен и возврат</a></li>
+                        </ul>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    </Accordion>
+
+                <div className="footer__info_empty"></div>
                 <div className="footer__info_contacts">
                     <div className="footer__info_contacts_title">Следите за новинками и акциями</div>
                     <div className="footer__info_contacts_subscribe">

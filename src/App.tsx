@@ -12,7 +12,7 @@ function App() {
       <Header1 />
       <Header2 />
       <Main />
-      {/* <Footer /> */}
+      <Footer />
       <Pageup />
       {/* <CenterMode /> */}
     </div>

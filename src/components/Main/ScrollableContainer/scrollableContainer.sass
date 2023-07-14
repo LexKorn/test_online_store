@@ -4,6 +4,7 @@
     &__list
         display: flex
         overflow-x: hidden
+        overflow-y: hidden
         list-style: none
         padding: 0 10px
         margin: 0
@@ -26,7 +27,14 @@
         opacity: 1
 .buttonLeft 
     left: -20px
-    rotate: 180deg
+    // rotate: 180deg
+    transform: rotate(180deg)
+    /* Firefox */
+    -moz-transform: rotate(180deg)
+    /* Safari and Chrome */
+    -webkit-transform: rotate(180deg)
+    /* Opera */
+    -o-transform: rotate(180deg)
 .buttonRight 
     right: -20px
 
