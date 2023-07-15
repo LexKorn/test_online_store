@@ -1,60 +1,58 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 
 import firstSlide from '../../../assets/images/banner/banner1.png';
+import Slider from '../Slider/Slider';
+import { IBanner } from '../../../types/types';
 
 import './banner.sass';
 
 
 const Banner: React.FC = () => {
+    const slides: IBanner[] = [
+        {
+            id: 1,
+            img: firstSlide,
+            title: 'Сезон подготовки к новогодним продажам открыт!',
+            description: [
+                'Искуственные елки',
+                'Гирлянды',
+                'Игрушки и украшения',
+            ],
+            button: 'Перейти к каталогу'
+        },
+        {
+            id: 2,
+            img: firstSlide,
+            title: 'Сезон подготовки к новогодним продажам открыт!',
+            description: [
+                'Искуственные елки',
+                'Гирлянды',
+                'Игрушки и украшения',
+                'Пиротехника',
+                'Новогодние подарки',
+            ],
+            button: 'Перейти к каталогу'
+        },
+        {
+            id: 3,
+            img: firstSlide,
+            title: 'Сезон подготовки к новогодним продажам открыт!',
+            description: [
+                'Искуственные елки',
+                'Гирлянды',
+                'Игрушки и украшения',
+                'Пиротехника',
+                'Новогодние подарки',
+                'Игрушки и украшения',
+                'Пиротехника',
+            ],
+            button: 'Перейти к каталогу'
+        },
+    ]
+
     return (
         <div className="banner">
-            <Carousel interval={null}>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={firstSlide}
-                    alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <div className="banner__title">Сезон подготовки к новогодним продажам открыт!</div>
-                        <ul className="banner__list">
-                            <li className="banner__list_item">Искуственные елки</li>
-                            <li className="banner__list_item">Гирлянды</li>
-                            <li className="banner__list_item">Игрушки и украшения</li>
-                            <li className="banner__list_item">Пиротехника</li>
-                            <li className="banner__list_item">Новогодние подарки</li>
-                        </ul>
-                        <button className="banner__btn">Перейти к каталогу</button>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={firstSlide}
-                    alt="Second slide"
-                    />
-
-                    <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src={firstSlide}
-                    alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+            <Slider slides={slides} delay={4000} />
         </div>
     );
 };
