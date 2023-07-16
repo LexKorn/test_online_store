@@ -1,7 +1,7 @@
 import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 
 import firstSlide from '../../../assets/images/banner/banner1.png';
-import Slider from '../Slider/Slider';
 import { IBanner } from '../../../types/types';
 
 import './banner.sass';
@@ -43,7 +43,6 @@ const Banner: React.FC = () => {
                 'Игрушки и украшения',
                 'Пиротехника',
                 'Новогодние подарки',
-                'Игрушки и украшения',
                 'Пиротехника',
             ],
             button: 'Перейти к каталогу'
@@ -52,7 +51,26 @@ const Banner: React.FC = () => {
 
     return (
         <div className="banner">
-            <Slider slides={slides} delay={4000} />
+            <Carousel interval={null}>
+                {slides.map(slide =>
+                    <Carousel.Item key={slide.id}>
+                        <img
+                            className="d-block w-100"
+                            src={slide.img}
+                            alt="banner"
+                        />
+                        <Carousel.Caption>
+                            <div className="banner__title">{slide.title}</div>
+                            <ul className="banner__list">
+                                {slide.description.map((elm, i) =>
+                                    <li className="banner__list_item" key={i}>{elm}</li>
+                                )}
+                            </ul>
+                            <button className="banner__btn">Перейти к каталогу</button>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                )}
+            </Carousel>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Accordion} from 'react-bootstrap';
 
 import mastercard from '../../assets/images/logos/mastercard.png';
@@ -9,10 +9,24 @@ import './footer.sass';
 
 
 const Footer: React.FC = () => {
+    const [windowWidth, setWindowWidth] = useState<number>(0);
+
+    const handleScroll = () => {
+        const position = window.innerWidth;
+        setWindowWidth(position);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div className='footer'>
             <div className="footer__info" >
-                <ul className="footer__info_nav" style={{display: window.innerWidth > 668 ? 'block' : 'none'}}>Компания
+                <ul className="footer__info_nav" style={{display: windowWidth > 668 ? 'block' : 'none'}}>Компания
                     <li className="footer__info_nav_item"><a href="#">О компании</a></li>
                     <li className="footer__info_nav_item"><a href="#">Блог</a></li>
                     <li className="footer__info_nav_item"><a href="#">Стать поставщиком</a></li>
@@ -21,7 +35,7 @@ const Footer: React.FC = () => {
                     <li className="footer__info_nav_item"><a href="#">Пользовательское соглашение</a></li>
                     <li className="footer__info_nav_item"><a href="#">Политика конфиденщиальности и оферта</a></li>
                 </ul>
-                <ul className="footer__info_nav" style={{display: window.innerWidth > 668 ? 'block' : 'none'}}>Покупателям
+                <ul className="footer__info_nav" style={{display: windowWidth > 668 ? 'block' : 'none'}}>Покупателям
                     <li className="footer__info_nav_item"><a href="#">Каталог</a></li>
                     <li className="footer__info_nav_item"><a href="#">Корзина</a></li>
                     <li className="footer__info_nav_item"><a href="#">Избранные товары</a></li>

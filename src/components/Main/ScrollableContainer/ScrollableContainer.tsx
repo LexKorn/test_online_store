@@ -24,7 +24,7 @@ const ScrollableContainer = ({catalog}: {catalog: IAdvantage[] | IProduct[]}) =>
     }
   };
 
-  const debounceCheckForScrollPosition = debounce(checkForScrollPosition, 200);
+  const debounceCheckForScrollPosition = debounce(checkForScrollPosition, 100);
 
   const scrollContainerBy = (distance: number) =>
     containerRef.current?.scrollBy({ left: distance, behavior: "smooth" });
