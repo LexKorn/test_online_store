@@ -8,8 +8,22 @@
             text-decoration: none
             span
                 font-size: 28px
+                font-weight: bold
                 color: rgb(40, 40, 40)
     &__products
         margin-top: 44px
         display: flex
         justify-content: space-between
+
+@media (max-width: 428px)
+    .catalog
+        margin: 21px 24px 0
+        &__breadcrumbs
+            margin-left: 0
+            a
+                font-size: 16px
+                color: #A9A9A9
+                span
+                    font-size: 24px
+        &__products
+            margin-top: 26px

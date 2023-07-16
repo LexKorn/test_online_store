@@ -1,9 +1,11 @@
 @import '../../../style/style'
     
 .banner
+    width: 87%
     height: 356px
     margin: 0 auto
     border-radius: 12px
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
     img
         height: 356px
         object-fit: cover
@@ -32,6 +34,7 @@
     .banner
         &__title
             font-size: 24px
+            line-height: 26px
 
 @media (max-width: 428px)
     .banner
@@ -40,14 +43,15 @@
             height: 176px
         &__title
             font-size: 16px
-            line-height: normal
+            line-height: 18px
         &__list
-            padding-top: 6px
+            padding: 6px 0 0 14px
             margin-bottom: 5px
             &_item
                 font-size: 10px
+                line-height: 13px
         &__btn
-            width: 104px
+            width: fit-content
             height: 21px
             padding: 6px 12px
             font-size: 8px

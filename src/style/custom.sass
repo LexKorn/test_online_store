@@ -3,6 +3,8 @@
         width: 477px
         display: flex
         flex-direction: column
+        top: 40px
+        left: 170px
     &-indicators
         bottom: -54px
         [data-bs-target]
@@ -30,3 +32,34 @@
     &-body
         background-color: rgb(238, 238, 238)
         padding: 0 12px
+
+@media (max-width: 768px)
+    .carousel
+        &-caption
+            top: 30px
+            left: 100px
+            width: 400px
+
+@media (max-width: 670px)
+    .carousel
+        &-caption
+            top: 20px
+            left: 60px
+            width: 350px
+
+@media (max-width: 576px)
+    .carousel
+        &-caption
+            top: 10px
+            left: 27px
+            width: 267px
+
+@media (max-width: 428px)
+    .carousel
+        &-caption
+            top: 0
+        &-indicators
+            bottom: -20px
+            [data-bs-target]
+                width: 8px
+                height: 8px
